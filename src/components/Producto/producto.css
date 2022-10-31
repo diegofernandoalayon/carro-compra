@@ -1,0 +1,15 @@
+.product-container{
+  border-radius: 1rem;
+  border: solid 1px #eee;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.1);
+  margin: 0 auto;
+  padding: 10px 15px;
+  width: 30%;
+}
+.product-img{
+  width: 100%;
+}
+.product-text{
+  display: flex;
+  flex-direction: column;
+}

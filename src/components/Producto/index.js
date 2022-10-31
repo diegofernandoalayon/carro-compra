@@ -1,13 +1,14 @@
 import { Component } from 'react'
-
+import Button from '../Button'
+import './producto.css'
 class Producto extends Component {
 
   render() {
     const { producto, agregarAlCarro } = this.props 
     return(
-      <div style={{display:'flex', flexDirection:'column'}}>
-        <img width={300} src={producto.img} alt={` for ${producto.name}`}  />
-        <div style={{display: 'flex', alignItems: 'center'}}>
+      <div className='product-container'>
+        <img className='product-img' src={producto.img} alt={` for ${producto.name}`}  />
+        <div className='product-text'>
           <div >
             <h4>
               {producto.name}
@@ -16,7 +17,7 @@ class Producto extends Component {
               {producto.price}
             </p>
           </div>
-          <button onClick={agregarAlCarro} style={{height: '30px'}}>Agregar al Carro</button>
+          <Button onClick={agregarAlCarro}>Agregar al carro</Button>
         </div>
       </div>
     )

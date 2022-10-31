@@ -1,10 +1,10 @@
 import { Component } from 'react'
-
+import './button.css'
 class Button extends Component {
 
   render() {
     return(
-      <button {...this.props} />
+      <button className='btn-1' {...this.props} />
     )
   }
 }

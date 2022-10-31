@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import Layout from './components/Layout'
 import Productos from './components/Productos'
 
 class App extends Component {
@@ -34,10 +35,12 @@ class App extends Component {
     console.log(this.state.productos[0].img)
     return(
       <div>
-        <Productos
-        agregarAlCarro={()=> console.log('no hace nada')}
-        productos={this.state.productos}
-       />
+        <Layout>
+          <Productos
+          agregarAlCarro={()=> console.log('no hace nada')}
+          productos={this.state.productos}
+        />
+        </Layout>
       </div>
     )
   }
