@@ -1,0 +1,16 @@
+.layout-container{
+  width: 480px;
+  margin: 0 auto;
+}
+@media (min-width: 650px){
+  .layout-container{
+    width: 700px;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 1200px){
+  .layout-container{
+    width: 1200px;
+    margin: 0 auto;
+  }
+}
