@@ -1,0 +1,12 @@
+.nav-bar{
+  align-items: center;
+  background-color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  justify-content: space-between;
+  position: relative;
+  padding: 0 1.5rem;
+  box-shadow: 0 2px 3px rgb(0,0,0,0.1);
+
+}
