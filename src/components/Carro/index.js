@@ -8,7 +8,7 @@ class Carro extends Component {
     return(
       <div>
         <span className='bubble'>
-          <BubbleAlert />
+          <BubbleAlert value={10} />
         </span>
         <button className='carro'>
           Card
