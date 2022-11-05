@@ -10,6 +10,8 @@
   opacity: 0.9;
 }
 
-/* .bubble{
-
-} */
+.bubble{
+  position: relative;
+  left: 12px;
+  top: 20px;
+}
