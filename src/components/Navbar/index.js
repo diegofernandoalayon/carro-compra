@@ -1,5 +1,6 @@
 import { Component } from 'react'
 import Logo from '../Logo'
+import Carro from '../Carro'
 import './navbar.css'
 class Navbar extends Component {
 
@@ -7,7 +8,7 @@ class Navbar extends Component {
     return(
       <nav className='nav-bar'>
         <Logo />
-        <p>Carro</p>
+        <Carro />
       </nav>
     )
   }

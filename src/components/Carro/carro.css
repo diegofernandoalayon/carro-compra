@@ -1,0 +1,15 @@
+.carro{
+  background-color: #359A2C;
+  border-radius: 15px;
+  border: none;
+  color: #FFF;
+  cursor: pointer;
+  padding: 15px;
+}
+.carro:hover{
+  opacity: 0.9;
+}
+
+/* .bubble{
+
+} */
