@@ -1,11 +1,11 @@
 import { Component } from 'react'
-
+import './logo.css'
 class Logo extends Component {
 
   render() {
     return(
       <>
-        <h1>Logo</h1>
+        <h1 className = 'logo'>Shop</h1>
       </>
     )
   }
