@@ -29,19 +29,42 @@ class App extends Component {
       {name: 'Pepino', price: 2700, img: '/productos/pepino.png'},
       {name: 'Tomate', price: 2400, img: '/productos/tomate.png'},
       {name: 'Uva', price: 3000, img: '/productos/uva.png'},
-      {name: 'Zanahoria', price: 2150, img: '/productos/zanahoria.png'},
-      
-    ]
+      {name: 'Zanahoria', price: 2150, img: '/productos/zanahoria.png'},   
+    ],
+    carro: []
+  }
+
+  agregarAlCarro = (producto) => {
+    const { carro } = this.state
+    if (carro.find( x => x.name === producto.name)){
+      const newCarro = carro.map( x =>{
+        return x.name === producto.name 
+                ? ({
+                  ...x, 
+                  cantidad: x.cantidad +1
+                })
+                : x
+      })
+      return this.setState({
+        carro: newCarro
+      })
+    }
+    return this.setState({
+      carro: this.state.carro.concat({
+        ...producto, 
+        cantidad: 1
+      })
+    })
   }
   render() {
-    console.log(this.state.productos[0].img)
+    console.log(this.state.carro)
     return(
       <div>
         <Navbar />
         <Layout>
           <Title />
           <Productos
-          agregarAlCarro={()=> console.log('no hace nada')}
+          agregarAlCarro={this.agregarAlCarro}
           productos={this.state.productos}
         />
         </Layout>

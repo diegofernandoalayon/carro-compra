@@ -17,7 +17,7 @@ class Producto extends Component {
               {producto.price}
             </p>
           </div>
-          <Button onClick={agregarAlCarro}>Agregar al carro</Button>
+          <Button onClick={()=> agregarAlCarro(producto)}>Agregar al carro</Button>
         </div>
       </div>
     )
