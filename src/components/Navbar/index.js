@@ -5,10 +5,11 @@ import './navbar.css'
 class Navbar extends Component {
 
   render() {
+    const { carro } = this.props
     return(
       <nav className='nav-bar'>
         <Logo />
-        <Carro />
+        <Carro carro={carro} />
       </nav>
     )
   }
