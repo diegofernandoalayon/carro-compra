@@ -1,0 +1,21 @@
+.detalles-carro{
+  background-color: white;
+  position: absolute;
+  margin-top: 30px;
+  box-shadow: 1px 5px 5px rgb(0,0,0,0.3);
+  border-radius: 5px;
+  width: 300px;
+  right: 0;
+}
+.detalles-ul{
+  margin: 0;
+  padding: 0 5px ;
+}
+.detalles-li{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 20px;
+  border-bottom: solid 1px #aaa;
+}
