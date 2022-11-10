@@ -19,3 +19,15 @@
   padding: 25px 20px;
   border-bottom: solid 1px #aaa;
 }
+.detalles-price{
+  font-size: 0.8rem;
+  color: #f23;
+}
+.detalles-total{
+  display: flex;
+  justify-content: end;
+  padding-right: 1rem;
+  gap: 1rem;
+  font-weight: 600;
+  color: #f23;
+}

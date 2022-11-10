@@ -21,7 +21,10 @@ class Carro extends Component {
           Card
         </button>
         {
-          this.state.showCar && <DetallesCarro carro = {carro} />
+          this.state.showCar 
+          && carro.length > 0
+          &&
+          <DetallesCarro carro = {carro} />
         }
         
       </div>

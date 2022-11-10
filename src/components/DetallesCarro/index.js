@@ -16,12 +16,25 @@ class DetallesCarro extends Component {
             >
               <img alt={`for ${x.name}`} src={x.img} width='50px' height='38px'/>
               {x.name} 
+              <span className='detalles-price'>
+                ${x.price}
+              </span>
               <span>
                 {x.cantidad}
               </span>
             </li>)
           }
+          <li className='detalles-total'>
+            <span>total:</span> 
+            <span>
+              $
+              {
+                carro.reduce((ac, el) => ac+(el.price*el.cantidad),0)
+              }
+            </span>
+          </li>
         </ul>
+
       </div>
     )
   }
