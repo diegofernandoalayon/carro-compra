@@ -12,5 +12,9 @@
   .layout-container{
     width: 1200px;
     margin: 0 auto;
+    
   }
+}
+.layout-container{
+  margin-top: 100px;
 }
