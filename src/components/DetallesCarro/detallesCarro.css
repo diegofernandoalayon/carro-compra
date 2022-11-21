@@ -31,3 +31,13 @@
   font-weight: 600;
   color: #f23;
 }
+.detalles-delete{
+  border: none;
+  background-color: transparent;
+  color: #f23;
+  cursor: pointer;
+}
+.detalles-delete:hover{
+  transform: scale(1.5);
+
+}

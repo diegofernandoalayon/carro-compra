@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import Trash from '../Icons/Trash'
 import './detallesCarro.css'
 class DetallesCarro extends Component {
 
@@ -22,6 +23,9 @@ class DetallesCarro extends Component {
               <span>
                 {x.cantidad}
               </span>
+                <button className='detalles-delete'>
+                  <Trash />
+                </button>
             </li>)
           }
           <li className='detalles-total'>
