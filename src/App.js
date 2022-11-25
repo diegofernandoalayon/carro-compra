@@ -56,11 +56,25 @@ class App extends Component {
       })
     })
   }
+  eliminarDelCarro = (producto) => {
+    const {carro } = this.state 
+    if(carro.find( x => x.name === producto.name)){
+      const newCarro = carro.filter(p => p.name !== producto.name)
+      return this.setState({
+        carro: newCarro
+      })
+    }
+
+  }
   render() {
-    console.log(this.state.carro)
+    
     return(
       <div>
-        <Navbar carro={this.state.carro} />
+        <Navbar 
+        carro={this.state.carro} 
+        eliminarDelCarro={ this.eliminarDelCarro }
+        />
+
         <Layout>
           <Title />
           <Productos

@@ -7,7 +7,7 @@ class Carro extends Component {
     showCar : false
   }
   render() {
-    const { carro } = this.props
+    const { carro, eliminarDelCarro } = this.props
     const cantidad = carro.reduce((acc, el) => acc + el.cantidad, 0)
     return(
       <div>
@@ -24,7 +24,7 @@ class Carro extends Component {
           this.state.showCar 
           && carro.length > 0
           &&
-          <DetallesCarro carro = {carro} />
+          <DetallesCarro carro = {carro}  eliminarDelCarro={eliminarDelCarro}/>
         }
         
       </div>

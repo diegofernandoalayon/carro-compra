@@ -5,11 +5,14 @@ import './navbar.css'
 class Navbar extends Component {
 
   render() {
-    const { carro } = this.props
+    const { carro, eliminarDelCarro } = this.props
     return(
       <nav className='nav-bar'>
         <Logo />
-        <Carro carro={carro} />
+        <Carro 
+          carro={carro}  
+          eliminarDelCarro={eliminarDelCarro} 
+        />
       </nav>
     )
   }
