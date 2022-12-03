@@ -33,18 +33,35 @@ class App extends Component {
     ],
     carro: []
   }
+  
+  ACTIONS = {
+    RES: 'res',
+    SUM: 'sum'
+  }
+  mapeo = (carro,producto,action) => {
+    const newCarro = carro.map(e => {
+      if(e.name === producto.name){
+        if(action === this.ACTIONS.SUM){
+          return{
+          ...e,
+            cantidad: e.cantidad+1
+          }  
+        }else if(action === this.ACTIONS.RES){
+          return{
+          ...e,
+          cantidad: e.cantidad-1
+          }
+        }
+      }
+      return e
+    })
+    return newCarro
+  }
 
   agregarAlCarro = (producto) => {
     const { carro } = this.state
     if (carro.find( x => x.name === producto.name)){
-      const newCarro = carro.map( x =>{
-        return x.name === producto.name 
-                ? ({
-                  ...x, 
-                  cantidad: x.cantidad +1
-                })
-                : x
-      })
+      const newCarro = this.mapeo(carro, producto, this.ACTIONS.SUM)
       return this.setState({
         carro: newCarro
       })
@@ -64,7 +81,28 @@ class App extends Component {
         carro: newCarro
       })
     }
+  }
+  incrementarCarro = (producto) => {
+    const { carro } = this.state
+    if(carro.find( x => x.name === producto.name)){
+      const newCarro = this.mapeo(carro, producto, this.ACTIONS.SUM)
+      return this.setState({
+        carro: newCarro
+      })
+    }
+  }
+  decrementarCarro = (producto) => {
+    const { carro } = this.state
+    if(carro.find(x => x.name === producto.name)){
+      if(producto.cantidad > 1){
 
+        const newCarro = this.mapeo(carro, producto, this.ACTIONS.RES)
+        return this.setState({
+          carro: newCarro
+        })
+      }
+      return this.eliminarDelCarro(producto)
+    }
   }
   render() {
     
@@ -73,6 +111,8 @@ class App extends Component {
         <Navbar 
         carro={this.state.carro} 
         eliminarDelCarro={ this.eliminarDelCarro }
+        incrementarCarro={ this.incrementarCarro }
+        decrementarCarro={ this.decrementarCarro }
         />
 
         <Layout>
