@@ -20,8 +20,16 @@ class DetallesCarro extends Component {
               <span className='detalles-price'>
                 ${x.price}
               </span>
-              <span>
-                {x.cantidad}
+              <span className='detalles-cant'>
+                <button className='detalles-btn'>
+                  -
+                </button>
+                <span>
+                  {x.cantidad}
+                </span>
+                <button className='detalles-btn'>
+                  +
+                </button>
               </span>
                 <button className='detalles-delete' onClick={() => eliminarDelCarro(x)}>
                   <Trash />
