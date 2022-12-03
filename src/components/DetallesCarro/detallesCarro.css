@@ -6,6 +6,8 @@
   border-radius: 5px;
   width: 300px;
   right: 0;
+  display: flex;
+  justify-content: center;
 }
 .detalles-ul{
   margin: 0;
@@ -15,6 +17,7 @@
   list-style-type: none;
   display: flex;
   justify-content: space-between;
+  gap: 1rem;
   align-items: center;
   padding: 25px 20px;
   border-bottom: solid 1px #aaa;
