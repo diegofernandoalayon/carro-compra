@@ -36,13 +36,21 @@ class DetallesCarro extends Component {
             </li>)
           }
           <li className='detalles-total'>
-            <span>total:</span> 
-            <span>
-              $
-              {
-                carro.reduce((ac, el) => ac+(el.price*el.cantidad),0)
-              }
-            </span>
+            <div>
+              <button className='detalles-vaciar'>
+                Vaciar carro
+                <Trash />
+              </button>
+            </div>
+            <div>
+              <span>total:</span> 
+              <span>
+                $
+                {
+                  carro.reduce((ac, el) => ac+(el.price*el.cantidad),0)
+                }
+              </span>
+            </div>
           </li>
         </ul>
 

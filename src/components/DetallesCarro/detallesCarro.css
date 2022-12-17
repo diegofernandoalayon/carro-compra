@@ -8,6 +8,7 @@
   right: 0;
   display: flex;
   justify-content: center;
+  z-index:0;
 }
 .detalles-ul{
   margin: 0;
@@ -48,8 +49,8 @@
 }
 .detalles-total{
   display: flex;
-  justify-content: flex-end;
-  padding-right: 1rem;
+  justify-content: space-between;
+  padding:0 1rem;
   gap: 1rem;
   font-weight: 600;
   color: #f23;
@@ -63,4 +64,15 @@
 .detalles-delete:hover{
   transform: scale(1.5);
 
+}
+.detalles-vaciar{
+  border: none;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  color: #f23;
+  cursor: pointer;
+}
+.detalles-vaciar:hover{
+  transform: scale(1.2);
 }
