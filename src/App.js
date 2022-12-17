@@ -104,6 +104,11 @@ class App extends Component {
       return this.eliminarDelCarro(producto)
     }
   }
+  vaciarCarro = () => {
+    return this.setState({
+      carro: []
+    })
+  }
   render() {
     
     return(
@@ -113,6 +118,7 @@ class App extends Component {
         eliminarDelCarro={ this.eliminarDelCarro }
         incrementarCarro={ this.incrementarCarro }
         decrementarCarro={ this.decrementarCarro }
+        vaciarCarro={ this.vaciarCarro}
         />
 
         <Layout>

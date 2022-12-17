@@ -5,7 +5,7 @@ import './navbar.css'
 class Navbar extends Component {
 
   render() {
-    const { carro, eliminarDelCarro, incrementarCarro, decrementarCarro } = this.props
+    const { carro, eliminarDelCarro, incrementarCarro, decrementarCarro, vaciarCarro } = this.props
     return(
       <nav className='nav-bar'>
         <Logo />
@@ -14,6 +14,7 @@ class Navbar extends Component {
           eliminarDelCarro={eliminarDelCarro} 
           incrementarCarro={incrementarCarro}
           decrementarCarro={decrementarCarro}
+          vaciarCarro={vaciarCarro}
         />
       </nav>
     )

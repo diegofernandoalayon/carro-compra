@@ -4,7 +4,7 @@ import './detallesCarro.css'
 class DetallesCarro extends Component {
 
   render(){
-    const { carro, eliminarDelCarro, incrementarCarro, decrementarCarro } = this.props
+    const { carro, eliminarDelCarro, incrementarCarro, decrementarCarro, vaciarCarro } = this.props
     return(
       <div className='detalles-carro'>
         <ul className='detalles-ul'>
@@ -37,7 +37,7 @@ class DetallesCarro extends Component {
           }
           <li className='detalles-total'>
             <div>
-              <button className='detalles-vaciar'>
+              <button className='detalles-vaciar' onClick={() => vaciarCarro()}>
                 Vaciar carro
                 <Trash />
               </button>
