@@ -22,8 +22,8 @@ class DetallesCarro extends Component {
               </span>
               <SelectorCantidad 
                 elemento={x}
-                decrementarCarro={decrementarCarro}
-                incrementarCarro={incrementarCarro}
+                decrementar={decrementarCarro}
+                incrementar={incrementarCarro}
               />
                 <button className='detalles-delete' onClick={() => eliminarDelCarro(x)}>
                   <Trash />

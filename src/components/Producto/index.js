@@ -1,8 +1,24 @@
 import { Component } from 'react'
 import Button from '../Button'
 import './producto.css'
+import SelectorCantidad from '../SelectorCantidad'
 class Producto extends Component {
+  state = {
+    cantidad: 1
+  }
 
+  incrementar = () => {
+    const newCantidad = this.state.cantidad + 1
+    return this.setState({
+      cantidad: newCantidad
+    })
+  }
+  decrementar = () => {
+    const newCantidad = this.state.cantidad - 1 || 1
+    return this.setState({
+      cantidad: newCantidad
+    })
+  }
   render() {
     const { producto, agregarAlCarro } = this.props 
     return(
@@ -15,6 +31,11 @@ class Producto extends Component {
             </h4>
             <p>
               {producto.price}
+              <SelectorCantidad 
+                elemento={this.state}
+                decrementar={this.decrementar}
+                incrementar={this.incrementar}
+              />
             </p>
           </div>
           <Button onClick={()=> agregarAlCarro(producto)}>Agregar al carro</Button>
