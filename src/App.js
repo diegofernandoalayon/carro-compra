@@ -58,7 +58,7 @@ class App extends Component {
     return newCarro
   }
 
-  agregarAlCarro = (producto) => {
+  agregarAlCarro = (producto,cant) => {
     const { carro } = this.state
     if (carro.find( x => x.name === producto.name)){
       const newCarro = this.mapeo(carro, producto, this.ACTIONS.SUM)
@@ -69,7 +69,7 @@ class App extends Component {
     return this.setState({
       carro: this.state.carro.concat({
         ...producto, 
-        cantidad: 1
+        cantidad: cant
       })
     })
   }

@@ -40,7 +40,7 @@ class Producto extends Component {
               />
             </p>
           </div>
-          <Button onClick={()=> agregarAlCarro(producto)}>Agregar al carro</Button>
+          <Button onClick={()=> agregarAlCarro(producto, this.state.cantidad)}>Agregar al carro</Button>
         </div>
       </div>
     )
