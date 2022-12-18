@@ -29,8 +29,10 @@ class Producto extends Component {
             <h4>
               {producto.name}
             </h4>
-            <p>
-              {producto.price}
+            <p className='product-cant'>
+              <span>
+                {producto.price}
+              </span>
               <SelectorCantidad 
                 elemento={this.state}
                 decrementar={this.decrementar}
