@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import Trash from '../Icons/Trash'
 import './detallesCarro.css'
+import SelectorCantidad from '../SelectorCantidad'
 class DetallesCarro extends Component {
 
   render(){
@@ -19,17 +20,11 @@ class DetallesCarro extends Component {
               <span className='detalles-price'>
                 ${x.price}
               </span>
-              <span className='detalles-cant'>
-                <button className='detalles-btn' onClick={() => decrementarCarro(x)}>
-                  -
-                </button>
-                <span>
-                  {x.cantidad}
-                </span>
-                <button className='detalles-btn' onClick={()=> incrementarCarro(x)}>
-                  +
-                </button>
-              </span>
+              <SelectorCantidad 
+                elemento={x}
+                decrementarCarro={decrementarCarro}
+                incrementarCarro={incrementarCarro}
+              />
                 <button className='detalles-delete' onClick={() => eliminarDelCarro(x)}>
                   <Trash />
                 </button>

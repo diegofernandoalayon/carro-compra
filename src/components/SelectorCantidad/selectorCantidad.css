@@ -1,0 +1,17 @@
+.detalles-cant{
+  font-size: 1.5rem;
+  display: flex;
+  border: solid 1px #359a2c;
+  gap: 0.5rem;
+  justify-content: center;
+  border-radius: 8px;
+}
+.detalles-btn{
+  background-color: transparent;
+  border: none;
+  font-size: 1.5rem;
+}
+.detalles-btn:hover{
+  color: #359a2c;
+  transform: scale(1.5);
+}
