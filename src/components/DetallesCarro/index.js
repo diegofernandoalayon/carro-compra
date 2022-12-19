@@ -25,9 +25,9 @@ class DetallesCarro extends Component {
                 decrementar={decrementarCarro}
                 incrementar={incrementarCarro}
               />
-                <button className='detalles-delete' onClick={() => eliminarDelCarro(x)}>
-                  <Trash />
-                </button>
+              <button className='detalles-delete' onClick={() => eliminarDelCarro(x)}>
+                <Trash />
+              </button>  
             </li>)
           }
           <li className='detalles-total'>
