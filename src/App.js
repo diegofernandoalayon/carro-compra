@@ -38,13 +38,13 @@ class App extends Component {
     RES: 'res',
     SUM: 'sum'
   }
-  mapeo = (carro,producto,action) => {
+  mapeo = (carro,producto,action,cant=1) => {
     const newCarro = carro.map(e => {
       if(e.name === producto.name){
         if(action === this.ACTIONS.SUM){
           return{
           ...e,
-            cantidad: e.cantidad+1
+            cantidad: e.cantidad+cant
           }  
         }else if(action === this.ACTIONS.RES){
           return{
@@ -61,7 +61,7 @@ class App extends Component {
   agregarAlCarro = (producto,cant) => {
     const { carro } = this.state
     if (carro.find( x => x.name === producto.name)){
-      const newCarro = this.mapeo(carro, producto, this.ACTIONS.SUM)
+      const newCarro = this.mapeo(carro, producto, this.ACTIONS.SUM,cant)
       return this.setState({
         carro: newCarro
       })
